@@ -1,0 +1,108 @@
+$hight_burger_line: 2px;
+
+
+.header{
+    padding: 10px 0;
+    background-color: red;
+    color: #fff;
+    &__logo{
+        color: #fff;
+    }
+    &__nav{
+        color: #fff;
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                margin-right: 10px;
+                a{
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__burger{
+        position: relative;
+       cursor: pointer;
+        span{
+            height: $hight_burger_line;
+            width: 14px;
+            background-color: #fff;
+        }
+        :first-child{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 0.4s;
+        }
+        :last-child{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.4s;
+        }
+        :nth-child(2){
+            position: absolute;
+            left: 0;
+            top: calc(50% - 1px);
+            transition: 0.4s;
+        }
+        &.active{
+            :first-child{
+                position: absolute;
+                top: 45%;
+                transform: rotate(45deg);
+                transition: 0.4s;        
+            }
+            :last-child{
+                transform: rotate(-45deg);
+                bottom: 45%;
+                transition: 0.4s;
+            }
+            :nth-child(2){
+                display: none;
+                transition: 0.4s;
+            }
+        }
+    }
+    @media screen and (max-width: 992px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+    }
+}
+
+.mobile{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    top: 36px;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    background-color: #f00;
+    transform: translateX(100vw);
+    transition: 0.4s;
+    &__nav{
+        ul{
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
+                margin: 12px;
+                a{
+                    color: #fff;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    &.active{
+        transform: translateX(0);
+        transition: 0.4s;
+    }
+}
