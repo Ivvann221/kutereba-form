@@ -1,0 +1,200 @@
+body{
+    background-color: #ccc;
+}
+.form-two{
+
+}
+.is-invalid{
+    background-image: url('/img/invalid.png') !important;
+}
+.col-form-label{
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 30px;
+        & input {display:none;}
+  
+   .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 251, 251);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 1px solid rgb(44, 135, 34);
+    border-radius: 5px;
+       &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 35px;
+    left: 2px;
+    bottom: 1px;
+    background-color: rgb(44, 135, 34);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 10px;
+  }
+  &.round {
+    border-radius: 34px;
+  }
+  
+  &.round {
+    &::before{
+        border-radius: 50%;
+    }
+  }
+}
+.slider-two {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 251, 251);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border: 1px solid rgb(245, 133, 133);
+    border-radius: 5px;
+       &:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 35px;
+    right: 2px;
+    bottom: 1px;
+    background-color: rgb(238, 127, 114);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 10px;
+  }
+  &.round {
+    border-radius: 34px;
+  }
+  
+  &.round {
+    &::before{
+        border-radius: 50%;
+    }
+  }
+}
+
+
+  
+  input{
+    &:checked + .slider{
+        background-color: #fffdfd;
+        border: 1px solid #f67373;
+        &:before{
+            background-color: #f67373;
+         
+                    }
+    }
+    &:focus + .slider {
+        box-shadow: 0 0 1px #fbf9f9;
+      }
+      &:checked + .slider:before {
+        -webkit-transform: translateX(29px);
+        -ms-transform: translateX(29px);
+        transform: translateX(29px);
+      }
+  } 
+  input{
+    &:checked + .slider-two{
+        background-color: #fffdfd;
+        border: 1px solid  rgb(44, 135, 34);
+        &:before{
+            background-color: rgb(44, 135, 34);
+         
+                    }
+    }
+    &:focus + .slider-two{
+        box-shadow: 0 0 1px #fbf9f9;
+      }
+      &:checked + .slider-two:before {
+        -webkit-transform: translateX(-29px);
+        -ms-transform: translateX(-29px);
+        transform: translateX(-29px);
+      }
+  } 
+}
+.form-check{
+&-input{
+    &:checked{
+        background-color:  rgb(74, 129, 19) !important;
+        background-image: none !important;
+        width: 18px;
+        height: 18px;
+        border-color:  rgb(44, 135, 34) ;
+        box-shadow: none;
+    }
+background-color: #fbf9f9;
+    width: 20px;
+    height: 20px;
+    border: 1px solid  rgb(44, 135, 34) ;
+}
+}
+.btn{
+    color: #fff;
+    border: none;
+    height: 40px;
+    font-weight: 700;
+    margin-right: 20px;
+    margin-left: 12px;
+    &-hover_red{
+        background-color: #932c1d !important;
+        &:hover{
+            background-color: #4d1307 !important;
+        }
+    }
+    &-active{
+        width: 110px;
+        background-color: #2f9709;
+        &:hover{
+            background-color: #296215;
+        }
+    }
+    &-hover{
+        width: 100px;
+        background-color: #296215;
+        &:hover{
+            background-color: #1d3913;
+        }
+    }
+    &-danger{
+        width: 120px;
+
+    }
+    &-disabled{
+        width: 140px;
+        background-color: rgb(101, 100, 100);
+        &:hover{
+            background-color: #313131;
+        }
+    }
+    &-plus{
+        width: 40px;
+        border-radius: 50%;
+        background-color: #2f9709;
+        &:hover{
+            background-color: #0d611a;
+        }
+    }
+    &-minus{
+        width: 40px;
+        border-radius: 50%;
+        background-color: #b34c4c;
+        &:hover{
+            background-color: #631515;
+        }
+    }
+}
