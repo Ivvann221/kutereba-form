@@ -1,9 +1,6 @@
 body{
     background-color: #ccc;
 }
-.form-two{
-
-}
 .is-invalid{
     background-image: url('/img/invalid.png') !important;
 }
@@ -127,22 +124,14 @@ body{
       }
   } 
 }
-.form-check{
-&-input{
-    &:checked{
-        background-color:  rgb(74, 129, 19) !important;
-        background-image: none !important;
-        width: 18px;
-        height: 18px;
-        border-color:  rgb(44, 135, 34) ;
-        box-shadow: none;
-    }
-background-color: #fbf9f9;
-    width: 20px;
-    height: 20px;
-    border: 1px solid  rgb(44, 135, 34) ;
-}
-}
+input[type=radio]:checked ~ .check {
+    border: 5px solid #0DFF92;
+  }
+  
+  input[type=radio]:checked ~ .check::before{
+    background: #0DFF92;
+  }
+
 .btn{
     color: #fff;
     border: none;
@@ -197,4 +186,14 @@ background-color: #fbf9f9;
             background-color: #631515;
         }
     }
+}
+.form-control{
+    max-width: 600px;
+}
+.col-form-label{
+    margin-top: 30px;
+}
+.radio-btn{
+    width: 17px;
+    height: 17px;
 }
