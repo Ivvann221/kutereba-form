@@ -1,51 +1,61 @@
-.cart{
+.cart {
   background-color: #ccc;
+.credit {
+  position: relative;
+  background-color: rgb(73, 188, 188);
+  border-radius: 10px;
+  height: 500px;
 
-  
-}
-.credit{
-    position: relative;
-   background-color: rgb(73, 188, 188);
-   border-radius: 10px;
-   height: 500px;
-   
-    &__title{
-        padding: 10px 0 10px 65px;
+  &__title {
+    padding: 10px 0 10px 65px;
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    max-width: 900px;
+    width: 100%;
+    background-color: rgba(255, 100, 22, 0.982);
+    z-index: 10;
+
+    p {
+      font-size: 23px;
+      color: #fff;
+      font-weight: 700;
+    }
+  }
+
+  &__content {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    overflow: hidden;
+
+    &_image {
       position: absolute;
-      top: 50px;
-      left: -30px;
-      width: 900px;
-      background-color: rgba(255, 100, 22, 0.982);
-      z-index: 10;
-      p{
-        font-size: 23px;
-        color: #fff;
-        font-weight: 700;
-      }
+      bottom: -100px;
+      right: -150px;
     }
-    &__content{
-        width: 500px;
-        height: 500px;
-        position: absolute;
-        bottom: 0px;
-        right: 0px;
-        overflow: hidden;
-        &_image{
-            position: absolute;
-            bottom: -100px;
-            right: -150px;
-        }
+  }
+
+  form {
+    padding: 100px 0 50px 30px;
+
+    &-label {
+      margin-top: 30px;
     }
-   
-    form{
-        padding: 100px 0 50px 30px;
-       .form-label{
-        margin-top: 30px;
-       }
-       .form-control{
-        background-color: rgb(113, 194, 194);
-        border: 0px;
-        border-bottom: 2px solid black;
-       }
+
+    &-control {
+      background-color: rgb(113, 194, 194);
+      border: 0px;
+      border-bottom: 2px solid black;
     }
+  }
+}
+}
+
+label {
+  @media screen and (max-width: 480px) {
+    font-size: 15px;
+  }
 }
